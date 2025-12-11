@@ -40,6 +40,7 @@ io.on('connection', (socket) => {
 
 // POST endpoint to receive data from any device
 app.post('/api/data', (req, res) => {
+    console.log(req.body,'+++++++++++++++++');
     const receivedData = {
         data: req.body,
         timestamp: new Date().toISOString(),
